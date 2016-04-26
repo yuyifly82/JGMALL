@@ -50,7 +50,7 @@ import com.insthub.BeeFramework.fragment.BaseFragment;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.MyDialog;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.F1_NewAddressActivity;
 import com.insthub.ecmobile.activity.C1_CheckOutActivity;
 import com.insthub.ecmobile.activity.PayWebActivity;

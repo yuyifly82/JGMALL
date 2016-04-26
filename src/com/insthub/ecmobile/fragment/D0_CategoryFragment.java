@@ -55,7 +55,7 @@ import com.insthub.BeeFramework.fragment.BaseFragment;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.MyViewGroup;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.B1_ProductListActivity;
 import com.insthub.ecmobile.model.ProtocolConst;
 import com.insthub.ecmobile.model.SearchModel;

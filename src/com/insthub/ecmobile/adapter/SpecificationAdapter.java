@@ -19,7 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.component.HotSellingCell;
 import com.insthub.ecmobile.component.SpecificationCell;
 import com.insthub.ecmobile.protocol.SPECIFICATION;

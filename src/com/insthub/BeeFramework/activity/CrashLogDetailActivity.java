@@ -2,7 +2,7 @@ package com.insthub.BeeFramework.activity;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 /*
  *	 ______    ______    ______

@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.insthub.BeeFramework.Utils.TimeUtil;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.COMMENTS;
 
 import android.content.Context;

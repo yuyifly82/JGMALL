@@ -27,7 +27,7 @@ import android.widget.TextView;
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.model.BusinessResponse;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.B4_ProductParamAdapter;
 import com.insthub.ecmobile.model.GoodDetailDraft;
 

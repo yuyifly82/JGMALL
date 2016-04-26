@@ -40,7 +40,7 @@ import com.insthub.BeeFramework.model.BeeQuery;
 import com.insthub.BeeFramework.view.MyDialog;
 import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.ECMobileAppConst;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.SESSION;
 import com.umeng.analytics.MobclickAgent;
 

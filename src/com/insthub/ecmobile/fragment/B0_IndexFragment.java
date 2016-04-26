@@ -49,7 +49,7 @@ import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.MyListView;
 import com.insthub.ecmobile.EcmobileManager;
 import com.insthub.ecmobile.EcmobileManager.RegisterApp;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.B1_ProductListActivity;
 import com.insthub.ecmobile.activity.B2_ProductDetailActivity;
 import com.insthub.ecmobile.activity.BannerWebActivity;

@@ -20,7 +20,7 @@ import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.model.BaseModel;
 import com.insthub.BeeFramework.model.BeeCallback;
 import com.insthub.BeeFramework.view.MyProgressDialog;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.*;
 import org.json.JSONArray;
 import org.json.JSONException;

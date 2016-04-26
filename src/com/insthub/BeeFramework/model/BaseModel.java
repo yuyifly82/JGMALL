@@ -47,7 +47,7 @@ import android.widget.Toast;
 
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.A0_SigninActivity;
 import com.insthub.ecmobile.protocol.SESSION;
 import com.insthub.ecmobile.protocol.STATUS;

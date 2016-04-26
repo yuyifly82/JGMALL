@@ -35,7 +35,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.tencent.weibo.sdk.android.api.WeiboAPI;
 import com.tencent.weibo.sdk.android.api.adapter.GalleryAdapter;
 import com.tencent.weibo.sdk.android.api.util.Util;

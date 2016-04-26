@@ -51,7 +51,7 @@ import com.external.maxwin.view.XListView.IXListViewListener;
 import com.insthub.BeeFramework.fragment.BaseFragment;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.WebImageView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.model.ProtocolConst;
 import com.insthub.ecmobile.model.UserInfoModel;
 import com.insthub.ecmobile.protocol.USER;

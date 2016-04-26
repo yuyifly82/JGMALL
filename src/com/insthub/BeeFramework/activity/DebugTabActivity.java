@@ -7,7 +7,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 /*
  *	 ______    ______    ______

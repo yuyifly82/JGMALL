@@ -51,7 +51,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import com.insthub.BeeFramework.BeeFrameworkConst;
 import com.insthub.BeeFramework.view.TouchableImageView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 public class FullScreenPhotoActivity extends BaseActivity implements OnClickListener{
 

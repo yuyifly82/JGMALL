@@ -18,7 +18,7 @@ import android.view.KeyEvent;
 import android.widget.ImageView;
 
 import com.insthub.BeeFramework.activity.BaseActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.umeng.analytics.MobclickAgent;
 
 public class AppOutActivity extends BaseActivity {

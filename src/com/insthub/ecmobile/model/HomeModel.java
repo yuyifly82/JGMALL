@@ -19,7 +19,7 @@ import com.insthub.BeeFramework.model.BeeQuery;
 import com.insthub.BeeFramework.model.BaseModel;
 import com.insthub.BeeFramework.model.BeeCallback;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.*;
 
 import android.content.Context;

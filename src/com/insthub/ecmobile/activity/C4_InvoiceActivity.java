@@ -32,7 +32,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.C4_InvoiceAdapter;
 import com.insthub.ecmobile.protocol.INV_LIST;
 

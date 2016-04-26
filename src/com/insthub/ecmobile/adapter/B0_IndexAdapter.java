@@ -27,7 +27,7 @@ import android.widget.Toast;
 
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
 import com.insthub.BeeFramework.view.WebImageView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.component.CategorySellingCell;
 import com.insthub.ecmobile.component.HotSellingCell;
 import com.insthub.ecmobile.component.ShopHelpCell;

@@ -18,7 +18,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.SPECIFICATION;
 import com.insthub.ecmobile.protocol.SPECIFICATION_VALUE;
 

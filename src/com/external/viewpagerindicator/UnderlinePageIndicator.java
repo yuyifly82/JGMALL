@@ -31,7 +31,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 /**
  * Draws a line for each page. The current page line is colored differently

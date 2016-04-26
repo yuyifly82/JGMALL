@@ -31,7 +31,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.F2_EditAddressActivity;
 import com.insthub.ecmobile.protocol.ADDRESS;
 

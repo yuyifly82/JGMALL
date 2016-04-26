@@ -48,7 +48,7 @@ import android.view.View.OnClickListener;
 import com.external.androidquery.callback.AjaxStatus;
 import com.external.maxwin.view.XListView;
 import com.external.maxwin.view.XListView.IXListViewListener;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.MyDialog;
 import com.insthub.BeeFramework.view.ToastView;

@@ -40,7 +40,7 @@ import com.external.maxwin.view.XListView;
 import com.external.maxwin.view.XListView.IXListViewListener;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.E5_CollectionAdapter;
 import com.insthub.ecmobile.model.CollectListModel;
 import com.insthub.ecmobile.model.ProtocolConst;

@@ -37,7 +37,7 @@ import com.external.androidquery.callback.AjaxStatus;
 import com.external.eventbus.EventBus;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.SpecificationAdapter;
 import com.insthub.ecmobile.model.GoodDetailDraft;
 import com.insthub.ecmobile.protocol.SPECIFICATION_VALUE;

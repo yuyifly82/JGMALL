@@ -28,7 +28,7 @@ import com.external.maxwin.view.XListView;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.model.BusinessMessage;
 import com.insthub.BeeFramework.model.BusinessResponse;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.component.AdvanceSearchValueCell;
 import com.insthub.ecmobile.model.AdvanceSearchModel;
 import com.insthub.ecmobile.model.GoodDetailDraft;

@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.F2_EditAddressActivity;
 import com.insthub.ecmobile.adapter.F0_AddressListAdapter.ViewHolder;
 import com.insthub.ecmobile.protocol.ADDRESS;

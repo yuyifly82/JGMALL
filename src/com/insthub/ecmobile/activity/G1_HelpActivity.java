@@ -31,7 +31,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.G1_HelpAdapter;
 import com.insthub.ecmobile.protocol.ARTICLE;
 import com.insthub.ecmobile.protocol.SHOPHELP;

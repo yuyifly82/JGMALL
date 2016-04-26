@@ -23,7 +23,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.INV_LIST;
 
 public class C4_InvoiceAdapter extends BaseAdapter {

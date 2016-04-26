@@ -23,7 +23,7 @@ import com.insthub.BeeFramework.activity.FullScreenPhotoActivity;
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
 import com.insthub.BeeFramework.view.WebImageView;
 import com.insthub.ecmobile.EcmobileApp;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.B3_ProductPhotoActivity;
 import com.insthub.ecmobile.protocol.PHOTO;
 import com.nostra13.universalimageloader.core.ImageLoader;

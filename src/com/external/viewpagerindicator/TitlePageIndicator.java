@@ -37,7 +37,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 
 import java.util.ArrayList;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 /**
  * A TitlePageIndicator is a PageIndicator which displays the title of left view

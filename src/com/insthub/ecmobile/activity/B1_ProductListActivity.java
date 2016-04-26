@@ -43,7 +43,7 @@ import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.B1_ProductListAdapter;
 import com.insthub.ecmobile.adapter.GoodListLargeListActivityAdapter;
 import com.insthub.ecmobile.model.GoodsListModel;

@@ -35,7 +35,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.C2_PaymentAdapter;
 import com.insthub.ecmobile.protocol.PAYMENT;
 

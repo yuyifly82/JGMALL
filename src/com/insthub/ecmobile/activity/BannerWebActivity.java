@@ -27,7 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.insthub.BeeFramework.activity.BaseActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.umeng.analytics.MobclickAgent;
 
 public class BannerWebActivity extends BaseActivity {

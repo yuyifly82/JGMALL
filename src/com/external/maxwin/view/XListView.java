@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import android.os.Message;
 import android.os.Handler;
 

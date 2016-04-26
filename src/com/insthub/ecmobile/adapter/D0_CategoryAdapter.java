@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.CATEGORY;
 
 import java.util.ArrayList;

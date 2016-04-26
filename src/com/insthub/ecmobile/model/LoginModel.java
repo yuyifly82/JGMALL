@@ -21,7 +21,7 @@ import android.content.res.Resources;
 import com.insthub.BeeFramework.BeeFrameworkConst;
 import com.insthub.BeeFramework.view.MyProgressDialog;
 import com.insthub.ecmobile.ErrorCodeConst;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.*;
 import org.json.JSONException;
 import org.json.JSONObject;

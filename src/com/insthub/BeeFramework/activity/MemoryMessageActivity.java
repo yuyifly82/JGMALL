@@ -16,7 +16,7 @@ import android.text.format.Formatter;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.BeeFramework.model.BeeCallback;
 
 import java.util.ArrayList;

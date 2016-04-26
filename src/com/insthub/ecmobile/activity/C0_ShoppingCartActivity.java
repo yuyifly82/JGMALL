@@ -45,7 +45,7 @@ import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.MyDialog;
 import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.C0_ShoppingCartAdapter;
 import com.insthub.ecmobile.model.AddressModel;
 import com.insthub.ecmobile.model.OrderModel;

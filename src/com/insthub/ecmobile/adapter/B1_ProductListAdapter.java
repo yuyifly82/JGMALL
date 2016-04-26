@@ -19,7 +19,7 @@ import java.util.List;
 import android.util.Log;
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;

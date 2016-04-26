@@ -38,7 +38,7 @@ import com.insthub.BeeFramework.BeeFrameworkApp;
 import com.insthub.BeeFramework.model.BeeQuery;
 import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.FILTER;
 import com.umeng.analytics.MobclickAgent;
 

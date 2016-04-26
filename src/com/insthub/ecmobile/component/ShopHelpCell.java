@@ -24,7 +24,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.G1_HelpActivity;
 import com.insthub.ecmobile.protocol.ARTICLE;
 import com.insthub.ecmobile.protocol.SHOPHELP;

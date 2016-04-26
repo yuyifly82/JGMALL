@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.insthub.BeeFramework.activity.BaseActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 public class OtherPayWebActivity extends BaseActivity {
 

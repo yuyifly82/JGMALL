@@ -53,7 +53,7 @@ import com.external.activeandroid.app.Application;
 import com.insthub.BeeFramework.Utils.CustomExceptionHandler;
 import com.insthub.BeeFramework.activity.DebugCancelDialogActivity;
 import com.insthub.BeeFramework.activity.DebugTabActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.SESSION;
 
 public class BeeFrameworkApp extends Application implements OnClickListener{

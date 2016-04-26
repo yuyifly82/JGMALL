@@ -44,7 +44,7 @@ import com.insthub.ecmobile.activity.C0_ShoppingCartActivity;
 import com.insthub.ecmobile.activity.E4_HistoryActivity;
 import com.insthub.ecmobile.fragment.C0_ShoppingCartFragment;
 import com.insthub.ecmobile.protocol.GOODS_LIST;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class C0_ShoppingCartAdapter extends BaseAdapter {

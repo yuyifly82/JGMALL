@@ -17,7 +17,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import com.insthub.BeeFramework.adapter.BeeBaseAdapter;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.component.GoodItemLargeCell;
 import com.insthub.ecmobile.protocol.SIMPLEGOODS;
 

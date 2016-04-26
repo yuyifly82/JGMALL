@@ -14,7 +14,7 @@ package com.insthub.ecmobile.activity;
 //
 
 import android.content.res.Resources;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 import android.app.Activity;
 import android.content.Intent;

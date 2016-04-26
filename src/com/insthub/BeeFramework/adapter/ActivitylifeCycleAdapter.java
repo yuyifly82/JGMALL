@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.BeeFramework.activity.BaseActivity;
 
 import java.util.ArrayList;

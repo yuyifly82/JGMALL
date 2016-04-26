@@ -34,7 +34,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.insthub.ecmobile.EcmobileApp;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.BeeFramework.view.WebImageView;
 import com.insthub.ecmobile.activity.B2_ProductDetailActivity;
 import com.insthub.ecmobile.protocol.COLLECT_LIST;

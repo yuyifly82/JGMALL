@@ -41,7 +41,7 @@ import com.external.activeandroid.query.Select;
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.F0_AddressListAdapter;
 import com.insthub.ecmobile.adapter.C0_ShoppingCartAdapter;
 import com.insthub.ecmobile.model.AddressModel;

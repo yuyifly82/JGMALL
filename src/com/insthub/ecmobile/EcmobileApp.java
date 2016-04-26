@@ -18,6 +18,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import com.insthub.BeeFramework.BeeFrameworkApp;
+import com.insthub.jgmall.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
 public class EcmobileApp extends BeeFrameworkApp

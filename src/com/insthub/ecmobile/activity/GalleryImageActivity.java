@@ -39,7 +39,7 @@ import com.external.easing.Expo;
 import com.external.easing.Sine;
 import com.insthub.BeeFramework.Utils.Utils;
 import com.insthub.BeeFramework.activity.BaseActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.GalleryImageAdapter;
 import com.umeng.analytics.MobclickAgent;
 

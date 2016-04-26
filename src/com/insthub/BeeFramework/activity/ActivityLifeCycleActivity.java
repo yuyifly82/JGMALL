@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.BeeFramework.adapter.ActivitylifeCycleAdapter;
 import com.insthub.BeeFramework.model.ActivityManagerModel;
 import com.external.maxwin.view.XListView;

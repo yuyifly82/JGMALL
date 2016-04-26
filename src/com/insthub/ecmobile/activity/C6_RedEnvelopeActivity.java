@@ -37,7 +37,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.external.androidquery.callback.AjaxStatus;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.model.ProtocolConst;

@@ -38,7 +38,7 @@ import com.external.activeandroid.util.ReflectionUtils;
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.model.AddressModel;
 import com.insthub.ecmobile.model.ProtocolConst;
 import com.insthub.ecmobile.protocol.ADDRESS;

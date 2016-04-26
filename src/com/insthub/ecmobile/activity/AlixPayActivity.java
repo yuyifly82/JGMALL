@@ -44,7 +44,7 @@ import com.alipay.sdk.app.PayTask;
 import com.external.alipay.PartnerConfig;
 import com.external.alipay.PayResult;
 import com.external.alipay.Rsa;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 import com.insthub.ecmobile.protocol.ORDER_INFO;
 

@@ -15,7 +15,7 @@ package com.insthub.ecmobile.adapter;
 
 import java.util.List;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.REGIONS;
 
 import android.content.Context;

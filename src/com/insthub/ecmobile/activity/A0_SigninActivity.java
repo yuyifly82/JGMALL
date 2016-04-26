@@ -37,7 +37,7 @@ import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.fragment.E0_ProfileFragment;
 import com.insthub.ecmobile.model.LoginModel;
 import com.insthub.ecmobile.protocol.ApiInterface;

@@ -36,7 +36,7 @@ import android.widget.Toast;
 
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.model.BusinessResponse;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.model.GoodDetailModel;
 import com.insthub.ecmobile.model.HomeModel;
 import com.insthub.ecmobile.model.ProtocolConst;

@@ -25,7 +25,7 @@ import android.widget.TextView;
 
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.activity.BaseActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.G2_InfoAdapter;
 import com.insthub.ecmobile.model.HelpModel;
 import com.insthub.ecmobile.model.ProtocolConst;

@@ -37,7 +37,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.C3_DistributionAdapter;
 import com.insthub.ecmobile.protocol.PAYMENT;
 import com.insthub.ecmobile.protocol.SHIPPING;

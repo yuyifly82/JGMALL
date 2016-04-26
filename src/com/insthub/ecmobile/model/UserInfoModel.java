@@ -18,7 +18,7 @@ import java.util.Map;
 
 import android.content.SharedPreferences;
 import com.insthub.BeeFramework.view.MyProgressDialog;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.fragment.E0_ProfileFragment;
 import com.insthub.ecmobile.protocol.*;
 import org.json.JSONException;

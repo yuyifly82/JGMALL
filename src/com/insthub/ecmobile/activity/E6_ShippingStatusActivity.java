@@ -40,7 +40,7 @@ import android.widget.TextView;
 
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.model.BusinessResponse;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.model.OrderModel;
 import com.insthub.ecmobile.model.ProtocolConst;
 

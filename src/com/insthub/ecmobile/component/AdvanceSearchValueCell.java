@@ -25,7 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.external.eventbus.EventBus;
 import com.insthub.BeeFramework.activity.BaseActivity;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.model.GoodDetailDraft;
 import com.insthub.ecmobile.protocol.SPECIFICATION;
 import com.insthub.ecmobile.protocol.SPECIFICATION_VALUE;

@@ -29,7 +29,7 @@ import android.widget.TextView;
 
 import com.external.eventbus.EventBus;
 import com.insthub.ecmobile.ShareConst;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.model.GoodDetailDraft;
 import com.insthub.ecmobile.protocol.SPECIFICATION;
 import com.insthub.ecmobile.protocol.SPECIFICATION_VALUE;

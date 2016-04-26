@@ -13,7 +13,7 @@ import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.ECMobileAppConst;
 import com.insthub.ecmobile.EcmobileManager;
 import com.insthub.ecmobile.ShareConst;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 import com.tencent.mm.sdk.constants.ConstantsAPI;
 import com.tencent.mm.sdk.modelbase.BaseReq;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.insthub.ecmobile"
+    package="com.insthub.jgmall"
     android:versionCode="1"
-    android:versionName="@string/app_version">
+    android:versionName="1.0.0">
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -52,7 +52,7 @@
         </activity>
 
 <activity
-                android:name=".wxapi.WXPayEntryActivity"
+                android:name="com.insthub.ecmobile.wxapi.WXPayEntryActivity"
                 android:exported="true"
                 android:launchMode="singleTop">
         </activity>

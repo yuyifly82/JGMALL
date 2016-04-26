@@ -33,7 +33,7 @@ import android.widget.*;
 
 import com.insthub.BeeFramework.view.WebImageView;
 import com.insthub.ecmobile.EcmobileApp;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.E6_ShippingStatusActivity;
 import com.insthub.ecmobile.protocol.GOODORDER;
 import com.insthub.ecmobile.protocol.ORDER_GOODS_LIST;

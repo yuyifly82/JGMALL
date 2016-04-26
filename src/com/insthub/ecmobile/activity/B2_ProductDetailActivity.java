@@ -59,7 +59,7 @@ import com.external.maxwin.view.XListView.IXListViewListener;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.B3_ProductPhotoAdapter;
 import com.insthub.ecmobile.model.ConfigModel;
 import com.insthub.ecmobile.model.GoodDetailDraft;

@@ -39,7 +39,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.activity.EcmobileMainActivity;
 import com.insthub.ecmobile.activity.GalleryImageActivity;
 import com.umeng.analytics.MobclickAgent;

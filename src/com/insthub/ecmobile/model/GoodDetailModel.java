@@ -24,7 +24,7 @@ import com.insthub.BeeFramework.model.BeeCallback;
 import com.insthub.BeeFramework.view.MyProgressDialog;
 import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.ErrorCodeConst;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.*;
 
 import org.json.JSONArray;

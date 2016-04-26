@@ -13,7 +13,7 @@ package com.insthub.ecmobile.model;
 //  Powered by BeeFramework
 //
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.GOODS;
 import com.insthub.ecmobile.protocol.SPECIFICATION;
 import com.insthub.ecmobile.protocol.SPECIFICATION_VALUE;

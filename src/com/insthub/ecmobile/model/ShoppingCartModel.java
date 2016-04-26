@@ -23,7 +23,7 @@ import android.widget.Toast;
 import com.insthub.BeeFramework.model.BeeQuery;
 import com.insthub.BeeFramework.view.MyProgressDialog;
 import com.insthub.ecmobile.ECMobileAppConst;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.*;
 import org.json.JSONArray;
 import org.json.JSONException;

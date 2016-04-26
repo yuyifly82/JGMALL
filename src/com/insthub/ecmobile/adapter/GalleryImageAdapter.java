@@ -25,7 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 public class GalleryImageAdapter extends PagerAdapter {
 

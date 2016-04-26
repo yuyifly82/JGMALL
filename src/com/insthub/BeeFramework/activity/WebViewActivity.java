@@ -44,7 +44,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 public class WebViewActivity extends BaseActivity{
 

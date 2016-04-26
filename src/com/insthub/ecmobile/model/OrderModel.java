@@ -19,7 +19,7 @@ import java.util.Map;
 
 import com.insthub.BeeFramework.view.MyProgressDialog;
 import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.*;
 import org.json.JSONArray;
 import org.json.JSONException;

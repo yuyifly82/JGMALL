@@ -43,7 +43,7 @@ import android.widget.Toast;
 import com.insthub.BeeFramework.Utils.WeixinUtil;
 import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.ShareConst;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;

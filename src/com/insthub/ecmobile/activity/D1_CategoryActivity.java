@@ -25,7 +25,7 @@ import com.external.maxwin.view.XListView;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.view.MyViewGroup;
 import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.D0_CategoryAdapter;
 import com.insthub.ecmobile.protocol.CATEGORY;
 import com.insthub.ecmobile.protocol.FILTER;

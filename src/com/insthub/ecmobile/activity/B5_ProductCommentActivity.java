@@ -38,7 +38,7 @@ import com.external.maxwin.view.XListView;
 import com.external.maxwin.view.XListView.IXListViewListener;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 import com.insthub.ecmobile.adapter.B5_ProductCommentAdapter;
 import com.insthub.ecmobile.model.CommentModel;
 import com.insthub.ecmobile.model.ProtocolConst;

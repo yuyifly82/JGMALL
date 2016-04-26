@@ -2,7 +2,7 @@ package com.external.maxwin.view;
 
 import java.util.Date;
 
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 import android.content.Context;
 import android.util.AttributeSet;

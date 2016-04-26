@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.insthub.BeeFramework.Utils.TimeUtil;
-import com.insthub.ecmobile.R;
+import com.insthub.jgmall.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;
