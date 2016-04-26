@@ -65,7 +65,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        
+		<activity android:name="com.jgmall.updatejg.startupdate"
+                  android:label="update" />
+		
         <activity android:name="com.insthub.ecmobile.activity.A0_SigninActivity"
                   android:launchMode="singleTask"
                   android:screenOrientation="portrait" />
