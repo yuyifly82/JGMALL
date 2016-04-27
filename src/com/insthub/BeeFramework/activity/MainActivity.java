@@ -34,11 +34,15 @@ package com.insthub.BeeFramework.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.insthub.BeeFramework.BeeFrameworkConst;
 import com.insthub.BeeFramework.BeeFrameworkApp;
@@ -63,7 +67,10 @@ public class MainActivity extends BaseActivity{
     protected static final String EXTRA_ACCESS_TOKEN = "access_token";
     public static final String EXTRA_MESSAGE = "message";
     public static final String CUSTOM_CONTENT ="CustomContent";
-
+    
+    //
+    
+    //
     // 在百度开发者中心查询应用的API Key
     public static final String API_KEY = "qGCsDwjNoNRNkg1iuvKZiAkz";
     private SharedPreferences shared;
@@ -208,4 +215,5 @@ public class MainActivity extends BaseActivity{
             String message = intent.getStringExtra(CUSTOM_CONTENT);
         }
     }
+    
 }

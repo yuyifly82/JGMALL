@@ -17,14 +17,19 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.FragmentManager;
+import android.app.ProgressDialog;
 import android.os.Build;
 import com.insthub.ecmobile.fragment.D0_CategoryFragment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -40,9 +45,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
+import com.gbugu.jgupdate.UpdateInfo;
+import com.gbugu.jgupdate.UpdateInfoService;
 import com.insthub.BeeFramework.BeeFrameworkApp;
 import com.insthub.BeeFramework.model.BeeQuery;
 import com.insthub.BeeFramework.view.ToastView;
@@ -67,17 +75,10 @@ public class EcmobileMainActivity extends FragmentActivity
     public static final String EXTRA_MESSAGE = "message";
     public static final String CUSTOM_CONTENT ="CustomContent";
     
-    //自动更新用
-    private TextView textView;
-	public static int version,serverVersion;
-	public static String versionName,serverVersionName,downloadResult;
-	private Button btn;
-	private ProgressBar proBar;
-	public static receiveVersionHandler handler2;
-	private UpdateManager manager = UpdateManager.getInstance();
-    //自动更新用
+
     
-    
+
+	
     // 在百度开发者中心查询应用的API Key
     public static String API_KEY ;
 
@@ -85,35 +86,20 @@ public class EcmobileMainActivity extends FragmentActivity
     {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
-	    
+	    checkUpdate();
 	    Intent intent = new Intent();
 		intent.setAction("com.BeeFramework.NetworkStateService");
 		startService(intent);
+		
+		
 		
 		if(getIntent().getStringExtra(CUSTOM_CONTENT) != null) {
 			pushIntent(getIntent().getStringExtra(CUSTOM_CONTENT));
 		}
 	    
-		textView = (TextView) findViewById(R.id.textView1);  //获取布局中的textView
-		btn = (Button) findViewById(R.id.button1);			//获取布局中的按钮
-		proBar=(ProgressBar)findViewById(R.id.progressBar1);//获取布局中的进度条
-		
-		Context c = this;
-		version = manager.getVersion(c);
-		versionName = manager.getVersionName(c);
-		
-		textView.setText("��ǰ�汾��:"+version+"\n"+"��ǰ�汾��:"+versionName);
-		
-		handler2 = new receiveVersionHandler();
-		
-		//�����°�ť����¼�
-		btn.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				manager.compareVersion(EcmobileMainActivity.this);
-			}
-		});
     }
+    
+   
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -264,23 +250,78 @@ public class EcmobileMainActivity extends FragmentActivity
             MobclickAgent.onPause(this);
         }
     }
-
-    public class receiveVersionHandler extends Handler{
-		@Override
+    
+    
+    private UpdateInfo info;
+    private UpdateInfoService updateInfoService;
+    private ProgressDialog progressDialog;
+    private void checkUpdate(){
+		Toast.makeText(EcmobileMainActivity.this, "正在检查版本更新..", Toast.LENGTH_SHORT).show();
+		// 自动检查有没有新版本 如果有新版本就提示更新
+		new Thread() {
+			@Override
+			public void run() {
+				try {
+					updateInfoService = new UpdateInfoService(EcmobileMainActivity.this);
+					info = updateInfoService.getUpDateInfo();
+					handler1.sendEmptyMessage(0);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();
+   }
+   
+	@SuppressLint("HandlerLeak")
+	private Handler handler1 = new Handler() {
 		public void handleMessage(Message msg) {
-		   proBar.setProgress(msg.arg1);
-		   proBar.setVisibility(R.id.button1);
-	       textView.setText("进度"+msg.arg1+"%");
-	       if(msg.arg1 == 100){
-	    	   Intent intent = new Intent(Intent.ACTION_VIEW); 
-		       String path = Environment.getExternalStorageDirectory()+"/JGMALL.apk";
-		       intent.setDataAndType(Uri.fromFile(new File(path)), 
-		    		   "application/vnd.android.package-archive");   
-		       startActivity(intent);
-	       }
-	       proBar.setVisibility(R.id.button1);
-		}
+			// 如果有更新就提示
+			if (updateInfoService.isNeedUpdate()) {
+				showUpdateDialog();
+			}
+		};
+	};
 
+	
+	//显示是否要更新的对话框
+	private void showUpdateDialog() {
+		Activity activity = this; 
+        while (activity.getParent() != null) {  
+            activity = activity.getParent();  
+            System.out.println(activity.getLocalClassName());
+        }  
+		AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+		builder.setIcon(android.R.drawable.ic_dialog_info);
+		builder.setTitle("请升级APP至版本" + info.getVersion());
+		builder.setMessage(info.getDescription());
+		builder.setCancelable(false);
+		builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				if (Environment.getExternalStorageState().equals(
+						Environment.MEDIA_MOUNTED)) {
+					downFile(info.getUrl());
+				} else {
+					Toast.makeText(EcmobileMainActivity.this, "SD卡不可用，请插入SD卡",
+							Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+		builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+			}
+		});
+		builder.create().show();
 	}
 
+	void downFile(final String url) { 
+		progressDialog = new ProgressDialog(EcmobileMainActivity.this);    //进度条，在下载的时候实时更新进度，提高用户友好度
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		progressDialog.setTitle("正在下载");
+		progressDialog.setMessage("请稍候...");
+		progressDialog.setProgress(0);
+		progressDialog.show();
+		updateInfoService.downLoadFile(url, progressDialog,handler1);
+	}
 }

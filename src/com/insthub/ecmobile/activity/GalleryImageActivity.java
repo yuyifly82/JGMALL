@@ -13,10 +13,17 @@ package com.insthub.ecmobile.activity;
 //  Powered by BeeFramework
 //
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.DisplayMetrics;
@@ -31,12 +38,21 @@ import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import java.io.BufferedInputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.sql.Connection;
+
 import com.external.HorizontalVariableListView.widget.HorizontalListView;
 import com.external.activeandroid.util.Log;
 import com.external.easing.Back;
 import com.external.easing.Cubic;
 import com.external.easing.Expo;
 import com.external.easing.Sine;
+import com.gbugu.jgupdate.UpdateInfo;
+import com.gbugu.jgupdate.UpdateInfoService;
 import com.insthub.BeeFramework.Utils.Utils;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.jgmall.R;
@@ -57,15 +73,19 @@ public class GalleryImageActivity extends BaseActivity implements OnGestureListe
     HorizontalScrollView background_srcollview;
     HorizontalScrollView layer_srcollview;
     int  backgoundWidth;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gallery_image);
+
+		
 		
 		shared = getSharedPreferences("userInfo", 0); 
 		editor = shared.edit();
         
+		
+		
         boolean isFirstRun = shared.getBoolean("isFirstRun", true);  
         if(!isFirstRun) {
         	Intent it = new Intent(this,EcmobileMainActivity.class);
@@ -130,7 +150,7 @@ public class GalleryImageActivity extends BaseActivity implements OnGestureListe
 			float velocityY) {		
 		if (e1.getX() - e2.getX() > 120) {      
 			if(pager_num == 5) {
-				Intent intent = new Intent(GalleryImageActivity.this,EcmobileMainActivity.class);
+				Intent intent = new Intent(GalleryImageActivity.this,GalleryImageActivity.class);
 				startActivity(intent);
 				finish();
 				editor.putBoolean("isFirstRun", false);
@@ -225,4 +245,6 @@ public class GalleryImageActivity extends BaseActivity implements OnGestureListe
         frameLayoutParams.width = dm.widthPixels;
         layer_image_five.setLayoutParams( frameLayoutParams);
     }
+ 
+
 }
