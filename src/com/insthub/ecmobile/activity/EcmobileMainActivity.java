@@ -13,6 +13,7 @@ package com.insthub.ecmobile.activity;
 //  Powered by BeeFramework
 //
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
@@ -23,14 +24,22 @@ import com.insthub.ecmobile.fragment.D0_CategoryFragment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
@@ -41,6 +50,7 @@ import com.insthub.ecmobile.EcmobileManager;
 import com.insthub.jgmall.R;
 import com.insthub.ecmobile.protocol.FILTER;
 import com.umeng.analytics.MobclickAgent;
+
 
 public class EcmobileMainActivity extends FragmentActivity
 {
@@ -56,7 +66,18 @@ public class EcmobileMainActivity extends FragmentActivity
     protected static final String EXTRA_ACCESS_TOKEN = "access_token";
     public static final String EXTRA_MESSAGE = "message";
     public static final String CUSTOM_CONTENT ="CustomContent";
-
+    
+    //自动更新用
+    private TextView textView;
+	public static int version,serverVersion;
+	public static String versionName,serverVersionName,downloadResult;
+	private Button btn;
+	private ProgressBar proBar;
+	public static receiveVersionHandler handler2;
+	private UpdateManager manager = UpdateManager.getInstance();
+    //自动更新用
+    
+    
     // 在百度开发者中心查询应用的API Key
     public static String API_KEY ;
 
@@ -73,6 +94,25 @@ public class EcmobileMainActivity extends FragmentActivity
 			pushIntent(getIntent().getStringExtra(CUSTOM_CONTENT));
 		}
 	    
+		textView = (TextView) findViewById(R.id.textView1);  //获取布局中的textView
+		btn = (Button) findViewById(R.id.button1);			//获取布局中的按钮
+		proBar=(ProgressBar)findViewById(R.id.progressBar1);//获取布局中的进度条
+		
+		Context c = this;
+		version = manager.getVersion(c);
+		versionName = manager.getVersionName(c);
+		
+		textView.setText("��ǰ�汾��:"+version+"\n"+"��ǰ�汾��:"+versionName);
+		
+		handler2 = new receiveVersionHandler();
+		
+		//�����°�ť����¼�
+		btn.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				manager.compareVersion(EcmobileMainActivity.this);
+			}
+		});
     }
 
     @Override
@@ -225,5 +265,22 @@ public class EcmobileMainActivity extends FragmentActivity
         }
     }
 
+    public class receiveVersionHandler extends Handler{
+		@Override
+		public void handleMessage(Message msg) {
+		   proBar.setProgress(msg.arg1);
+		   proBar.setVisibility(R.id.button1);
+	       textView.setText("进度"+msg.arg1+"%");
+	       if(msg.arg1 == 100){
+	    	   Intent intent = new Intent(Intent.ACTION_VIEW); 
+		       String path = Environment.getExternalStorageDirectory()+"/JGMALL.apk";
+		       intent.setDataAndType(Uri.fromFile(new File(path)), 
+		    		   "application/vnd.android.package-archive");   
+		       startActivity(intent);
+	       }
+	       proBar.setVisibility(R.id.button1);
+		}
+
+	}
 
 }

@@ -1,4 +1,4 @@
-package com.jgmall.updatejg;
+package com.gbugu.jgupdate;
 
 
 import com.insthub.jgmall.R;
