@@ -2,15 +2,15 @@ package com.gbugu.jgupdate;
 
 public class UpdateInfo
 {
-        private String version;
+        private Integer version;
         private String description;
         private String url;
         
-        public String getVersion()
+        public Integer getVersion()
         {
                 return version;
         }
-        public void setVersion(String version)
+        public void setVersion(Integer version)
         {
                 this.version = version;
         }

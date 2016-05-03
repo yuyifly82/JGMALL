@@ -22,7 +22,9 @@ import org.json.JSONObject;
 import com.external.activeandroid.util.Log;
 import com.insthub.ecmobile.activity.EcmobileMainActivity;
 import com.insthub.ecmobile.activity.GalleryImageActivity;
+import com.insthub.jgmall.R.string;
 
+import android.R.integer;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -75,7 +77,7 @@ public class UpdateInfoService {
 		JSONArray array = new JSONArray(serverJson);
 		JSONObject object = array.getJSONObject(0);
 		String getDescription = object.getString("description");
-		String getServerVersion = object.getString("version");
+		Integer getServerVersion = object.getInt("version");
 		String getApkUrl = object.getString("apkurl");
 		UpdateInfo updateInfo = new UpdateInfo();
 		updateInfo.setVersion(getServerVersion);
@@ -87,7 +89,7 @@ public class UpdateInfoService {
 
 	
 	public boolean isNeedUpdate(){
-			String new_version = updateInfo.getVersion(); // ���°汾�İ汾��
+			int new_version = updateInfo.getVersion(); // ���°汾�İ汾��
 			//��ȡ��ǰ�汾��
 			int now_version=0;
 			try {
@@ -98,7 +100,7 @@ public class UpdateInfoService {
 			} catch (NameNotFoundException e) {
 				e.printStackTrace();
 			}
-			if (new_version.equals(now_version)) {
+			if (new_version<=now_version) {
 				return false;
 			} else {
 				return true;
@@ -165,7 +167,7 @@ public class UpdateInfoService {
 	void update() {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setDataAndType(Uri.fromFile(new File(Environment
-				.getExternalStorageDirectory(), "Test.apk")),
+				.getExternalStorageDirectory(), "JGMALL.apk")),
 				"application/vnd.android.package-archive");
 		context.startActivity(intent);
 	}

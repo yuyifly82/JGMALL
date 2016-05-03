@@ -20,7 +20,13 @@ import android.app.Activity;
 import android.util.Log;
 import android.widget.*;
 import com.external.maxwin.view.XListView;
-import com.iflytek.cloud.speech.*;
+import com.iflytek.cloud.ErrorCode;
+import com.iflytek.cloud.InitListener;
+import com.iflytek.cloud.RecognizerResult;
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechError;
+import com.iflytek.cloud.SpeechListener;
+import com.iflytek.cloud.SpeechUtility;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
 import com.insthub.BeeFramework.Utils.JsonParser;
@@ -80,7 +86,7 @@ public class D0_CategoryFragment extends BaseFragment implements OnClickListener
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -247,13 +253,24 @@ public class D0_CategoryFragment extends BaseFragment implements OnClickListener
 		
 	}
 	
+	/**
+     * 初始化监听器。
+     */ 
+	private InitListener mInitListener = new InitListener() {
+        @Override
+        public void onInit(int code) {
+            if (code != ErrorCode.SUCCESS) {
+                //showTip("初始化失败，错误码：" + code);//这里的showTip想加就加，这只是一个toast
+            }
+        }
+    };
 	public void showRecognizerDialog() {
         String appid=EcmobileManager.getXunFeiCode(getActivity());
         if(appid!=null&&!"".equals(appid)) {
             //用户登录
-            SpeechUser.getUser().login(getActivity(), null, null
-                    , "appid=" + EcmobileManager.getXunFeiCode(getActivity()), listener);
-            final RecognizerDialog recognizerDialog = new RecognizerDialog(getActivity());
+            //SpeechUser.getUser().login(getActivity(), null, null
+            //        , "appid=" + EcmobileManager.getXunFeiCode(getActivity()));
+            final RecognizerDialog recognizerDialog= new RecognizerDialog(getActivity(), mInitListener);  
             //设置引擎为转写
             recognizerDialog.setParameter(SpeechConstant.DOMAIN, "iat");
             //设置识别语言为中文
@@ -263,8 +280,9 @@ public class D0_CategoryFragment extends BaseFragment implements OnClickListener
             //设置录音采样率为
             recognizerDialog.setParameter(SpeechConstant.SAMPLE_RATE, "16000");
             //设置监听对象
-            recognizerDialog.setListener(new RecognizerDialogListener() {
-                @Override
+            recognizerDialog.setListener(new RecognizerDialogListener(){
+            	
+            	@Override
                 public void onResult(RecognizerResult results, boolean b) {
                     String text = JsonParser.parseIatResult(results.getResultString());
                     if (text.length() > 0) {
@@ -284,10 +302,14 @@ public class D0_CategoryFragment extends BaseFragment implements OnClickListener
                     }
                 }
 
-                @Override
-                public void onError(SpeechError speechError) {
+				@Override
+				public void onError(SpeechError arg0) {
+					// TODO Auto-generated method stub
+					Toast mtoast=new Toast(getActivity());
+					mtoast.makeText(getActivity(), arg0.toString(), 3000).show();
+					
+				}
 
-                }
             });
             //开始识别
             recognizerDialog.show();
@@ -326,7 +348,6 @@ public class D0_CategoryFragment extends BaseFragment implements OnClickListener
     private SpeechListener listener = new SpeechListener()
     {
 
-        @Override
         public void onData(byte[] arg0) {
         }
 
@@ -342,5 +363,11 @@ public class D0_CategoryFragment extends BaseFragment implements OnClickListener
         @Override
         public void onEvent(int arg0, Bundle arg1) {
         }
+
+		@Override
+		public void onBufferReceived(byte[] arg0) {
+			// TODO Auto-generated method stub
+			
+		}
     };
 }

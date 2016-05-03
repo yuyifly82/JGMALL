@@ -51,6 +51,7 @@ import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
 import com.gbugu.jgupdate.UpdateInfo;
 import com.gbugu.jgupdate.UpdateInfoService;
+import com.iflytek.cloud.SpeechUtility;
 import com.insthub.BeeFramework.BeeFrameworkApp;
 import com.insthub.BeeFramework.model.BeeQuery;
 import com.insthub.BeeFramework.view.ToastView;
@@ -84,13 +85,13 @@ public class EcmobileMainActivity extends FragmentActivity
 
     public void onCreate(Bundle savedInstanceState)
     {
+		SpeechUtility.createUtility(EcmobileMainActivity.this, "appid=" + EcmobileManager.getXunFeiCode(EcmobileMainActivity.this));
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
-	    checkUpdate();
+	    checkUpdate();//检查是否有更新
 	    Intent intent = new Intent();
 		intent.setAction("com.BeeFramework.NetworkStateService");
 		startService(intent);
-		
 		
 		
 		if(getIntent().getStringExtra(CUSTOM_CONTENT) != null) {
@@ -256,7 +257,6 @@ public class EcmobileMainActivity extends FragmentActivity
     private UpdateInfoService updateInfoService;
     private ProgressDialog progressDialog;
     private void checkUpdate(){
-		Toast.makeText(EcmobileMainActivity.this, "正在检查版本更新..", Toast.LENGTH_SHORT).show();
 		// 自动检查有没有新版本 如果有新版本就提示更新
 		new Thread() {
 			@Override

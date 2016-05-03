@@ -24,7 +24,7 @@ public class EcmobileManager {
 	// 获取科大讯飞key
 	public static String getXunFeiCode(Context context)
     {
-        return "xxx";
+        return "57256a19";
 	}
 	
 	// 获取百度push的key

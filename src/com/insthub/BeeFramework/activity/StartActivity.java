@@ -40,6 +40,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import com.insthub.jgmall.R;
+import com.iflytek.cloud.SpeechUtility;
 import com.insthub.ecmobile.activity.EcmobileMainActivity;
 import com.insthub.ecmobile.activity.GalleryImageActivity;
 import com.umeng.analytics.MobclickAgent;
@@ -56,7 +57,7 @@ public class StartActivity extends Activity {
         context = this;
         //渐变
         AlphaAnimation aa = new AlphaAnimation(0.3f, 1.0f);
-        aa.setDuration(2000);
+        aa.setDuration(3000);
         startView.setAnimation(aa);
         aa.setAnimationListener(new AnimationListener() {
 

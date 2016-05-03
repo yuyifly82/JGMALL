@@ -118,7 +118,6 @@ public class B0_IndexFragment extends BaseFragment implements BusinessResponse,X
         }
 
         
-        
         if (null == ConfigModel.getInstance())
         {
             ConfigModel configModel = new ConfigModel(getActivity());

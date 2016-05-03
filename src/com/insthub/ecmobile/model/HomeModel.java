@@ -318,7 +318,48 @@ public class HomeModel extends BaseModel {
         aq.ajax(cb);
 
     }
+    //自已加的获取品牌
+    public void fetchAllBrand() {
+        homecategoryRequest request = new homecategoryRequest();
 
+        BeeCallback<JSONObject> cb = new BeeCallback<JSONObject>() {
+
+            @Override
+            public void callback(String url, JSONObject jo, AjaxStatus status) {
+                done(url, jo, status);
+                try {
+                    homecategoryResponse response = new homecategoryResponse();
+                    response.fromJson(jo);
+                    if (jo != null) {
+
+
+                        if (response.status.succeed == 1) {
+                            fileSave(jo.toString(), "goodsData");
+                            ArrayList<CATEGORYGOODS> simplegoodses = response.data;
+                            if (null != simplegoodses && simplegoodses.size() > 0) {
+                                categorygoodsList.clear();
+                                categorygoodsList.addAll(simplegoodses);
+
+                                HomeModel.this.OnMessageResponse(url, jo, status);
+                            }
+                        } else {
+                            categorygoodsList.clear();
+                        }
+
+
+                    }
+
+                } catch (JSONException e) {
+                }
+
+            }
+
+        };
+
+        cb.url(ApiInterface.HOME_CATEGORY).type(JSONObject.class);
+        aq.ajax(cb);
+
+    }
 
     protected void done(String url, JSONObject jo, AjaxStatus status) {
         String localUrl = url;
